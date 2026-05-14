@@ -27,10 +27,12 @@ from telegram.ext import (
 # 🔑 API KALITLARINI SHU YERGA QO'YING
 # (Ishlatmaydigan API ni bo'sh qoldiring)
 # =============================================
-TELEGRAM_BOT_TOKEN = "8817959824:AAHLDxUZUo5enAa61ArqX3wKzx2vH8HwHkU"   # @BotFather dan oling
-OPENAI_API_KEY     = "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"        # platform.openai.com
-GEMINI_API_KEY     = ""        # aistudio.google.com
-ANTHROPIC_API_KEY  = "YOUR_ANTHROPIC_API_KEY"     # console.anthropic.com
+import os
+
+TELEGRAM_BOT_TOKEN = os.getenv("TELEGRAM_BOT_TOKEN")
+OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
+GEMINI_API_KEY = os.getenv("GEMINI_API_KEY")
+ANTHROPIC_API_KEY = os.getenv("ANTHROPIC_API_KEY")
 # =============================================
 
 SYSTEM_PROMPT = (
