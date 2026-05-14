@@ -141,7 +141,7 @@ async def start(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
         "/model – AI ni almashtirish\n"
         "/clear – Suhbatni tozalash\n"
         "/help  – Yordam",
-        parse_mode="Markdown",
+        
     )
 
 
@@ -155,7 +155,7 @@ async def help_command(update: Update, context: ContextTypes.DEFAULT_TYPE) -> No
         "*/model* – AI ni tanlash\n"
         "*/clear* – Suhbat tarixini tozalash\n\n"
         "Istalgan xabar yozing — tanlangan AI javob beradi!",
-        parse_mode="Markdown",
+     
     )
 
 
@@ -192,7 +192,7 @@ async def model_callback(update: Update, context: ContextTypes.DEFAULT_TYPE) -> 
     await query.edit_message_text(
         f"✅ AI o'zgartirildi: *{MODELS[model_key]}*\n\n"
         "Suhbat tarixi tozalandi. Yangi savol yuboring!",
-        parse_mode="Markdown",
+        
     )
 
 
@@ -227,7 +227,7 @@ async def chat(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
         await update.message.reply_text(
             f"{reply}\n\n"
             f"——\n_{model_label}_",
-            parse_mode="Markdown",
+           
         )
 
     except Exception as e:
@@ -235,7 +235,7 @@ async def chat(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
         await update.message.reply_text(
             f"⚠️ Xato yuz berdi:\n`{e}`\n\n"
             "API kalitini tekshiring yoki /model bilan boshqa AI tanlang.",
-            parse_mode="Markdown",
+          
         )
 
 
